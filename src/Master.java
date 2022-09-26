@@ -2,7 +2,9 @@
 public class Master {
 	void allMathematic(int num1, int num2, int num3) {
 		int result;
-		System.out.println( result=num1+num2+num3);
+		result=num1+num2+num3;
+		
+		System.out.println();
 	}
 	void biggestElementBetweenThree(int num1, int num2, int num3) {
 		if (num1 >= num2 && num1 >= num3) {
@@ -26,7 +28,7 @@ public class Master {
 			System.out.println(num1 + " * " + i + " = " + num1 * i);
 		}
 	}
-
+//average
 	void average(int num1, int num2, int num3) {
 		int result;
 		result = (num1 + num2 + num3) / 3;
