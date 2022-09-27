@@ -163,4 +163,5 @@ public class Master {
 			System.err.println(temp + " is not a armstrong number");
 		}
 	}
+	void 
 }
