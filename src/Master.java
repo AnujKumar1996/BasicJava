@@ -14,6 +14,33 @@ public class Master {
 		System.out.println("Division = " + div + "\n And reminder = " + r);
 	}
 
+// 1.1.   A simple calculator
+	void calculator(int num1, int num2, int num3) {
+		int result;
+		switch (num3) {
+		case '+':
+			result = num1 + num2;
+			System.out.println(num1 + " + " + num2 + " = " + result);
+			break;
+		case '-':
+			result = num1 - num2;
+			System.out.println(num1 + " - " + num2 + " = " + result);
+			break;
+		case '*':
+			result = num1 * num2;
+			System.out.println(num1 + " * " + num2 + " = " + result);
+			break;
+		case '/':
+			float div = (float) num1 / num2;
+			System.out.println(num1 + " / " + num2 + " = " + div);
+			break;
+		default:
+			System.err.println("Invalid operator! \n PLEASE SELECT ONLY OPERATOR \n eg :+ , - , * , / ");
+			break;
+		}
+
+	}
+
 //2. find biggest between three number
 	void biggestElementBetweenThree(int num1, int num2, int num3) {
 		if (num1 >= num2 && num1 >= num3) {
@@ -23,6 +50,12 @@ public class Master {
 		} else {
 			System.out.println(num3 + " is greatest number");
 		}
+	}
+
+//	Biggest element Between two using ternary operator
+	void bigBetweenTwo(int num1, int num2) {
+		int large;
+		System.out.println(large = (num1 > num2) ? num1 : num2);
 	}
 
 //3. find even and off from two number
@@ -107,39 +140,7 @@ public class Master {
 			System.err.println(temp + " is not a plindrome Number");
 	}
 
-// 11. A simple calculator
-	void calculator(int num1, int num2, int num3) {
-		int result;
-		switch (num3) {
-
-		case '+':
-			result = num1 + num2;
-			System.out.println(num1 + " + " + num2 + " = " + result);
-			break;
-
-		case '-':
-			result = num1 - num2;
-			System.out.println(num1 + " - " + num2 + " = " + result);
-			break;
-
-		case '*':
-			result = num1 * num2;
-			System.out.println(num1 + " * " + num2 + " = " + result);
-			break;
-
-		case '/':
-			float div = (float) num1 / num2;
-			System.out.println(num1 + " / " + num2 + " = " + div);
-			break;
-
-		default:
-			System.out.println("Invalid operator!");
-			break;
-		}
-
-	}
-
-//	12. Armstrong Number
+//	11. Armstrong Number
 	void armstrongNumber(int num1) {
 		int r;
 		double arm = 0;
@@ -163,5 +164,31 @@ public class Master {
 			System.err.println(temp + " is not a armstrong number");
 		}
 	}
-	void 
+// 12. SWAPPING in multiple ways.
+//		1 way without using third variable
+	void swap1(int num1, int num2) {
+		num1 = num1 + num2;
+		num2 = num1 - num2;
+		num1 = num1 - num2;
+		System.out.println("\nFirst Way => \n After Swapping \n 1st No. is " + num1 + "\n 2nd No. is " + num2);
+	}
+
+//		2 way without using third variable
+	void swap2(int num1, int num2) {
+		num1 = num1 * num2;
+		num2 = num1 / num2;
+		num1 = num1 / num2;
+		System.out.println("\nSecond Way => \n After Swapping \n 1st No. is " + num1 + "\n 2nd No. is " + num2);
+
+	}
+
+//	3rd way to swap using third variables
+	void swap3(int num1, int num2) {
+		int temp = num1;
+		num1 = num2;
+		num2 = temp;
+
+		System.out.println("\nThird Way => \n After Swapping \n 1st No. is " + num1 + "\n 2nd No. is " + num2);
+
+	}
 }
